@@ -1,7 +1,7 @@
 module.exports = {
   API: "https://api.secondhomeseniors.com",
   // MainUrl: "https://secondhomeseniors.com",
-  MainUrl: "http://localhost:3000/",
+  MainUrl: "http://ZerpStvn.github.io/seconhome_testsite",
   BaseUrl: "http://localhost/wordpress/",
   userRoleTypes: {
     "696a87de-4059-4bcf-9929-072a8f1d83e9": {
