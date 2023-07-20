@@ -1,0 +1,46 @@
+import React, { useEffect, useState } from "react";
+import { compose } from "redux";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+const TruegagePreview = ({ sourceCode, truengageCreativeType, width, height, versionURL }) => {
+  const [frameWidth, setFrameWidth] = useState("640");
+  const [frameHeight, setFrameHeight] = useState("360");
+  function Iframe(props) {
+    return <div dangerouslySetInnerHTML={{ __html: props.iframe ? props.iframe : "" }} />;
+  }
+  useEffect(() => {
+   
+  }, [sourceCode, truengageCreativeType, width, height, versionURL]);
+
+  var sourceCoodeTemp = JSON.parse(sourceCode);
+  //var sourceCode2 = "eyJ3aWR0aCI6MTI4MCwiaGVpZ2h0Ijo3MjAsInNjZW5lcyI6W3siZHVyYXRpb24iOjYwMDAwLCJsYXllcnMiOlt7ImlkIjoiYmFja2dyb3VuZCIsIm9iamVjdHMiOlsiYmFja2dyb3VuZCIsInBoYXJtYWN5U3RvcmUiXX0seyJpZCI6ImZvcmVncm91bmQiLCJvYmplY3RzIjpbImFkU2tpcEJhbm5lciJdfSx7ImlkIjoiZHJhZ2dhYmxlIiwib2JqZWN0cyI6WyJrcm9nZXJDYXJkIiwiYXJyb3ciXX1dLCJvYmplY3RzIjp7ImJhY2tncm91bmQiOnsibmFtZSI6ImJhY2tncm91bmQiLCJpbWFnZSI6eyJzb3VyY2UiOiJodHRwczovL3MzLnVzLXdlc3QtMi5hbWF6b25hd3MuY29tL3Jlc291cmNlcy54cHNhZHMuY29tLXVzLXdlc3QtMi9wcm9kdWN0aW9uL2ltYWdlcy81NGVmOTA4OS02NGNhLTQxNzMtOTY5Yi0yNmEwYjc2NWM4Njcva3JvZ2VyYmFja2dyb3VuZC5wbmcifSwicG9zaXRpb24iOnsieCI6MCwieSI6MH0sIm9iamVjdFR5cGUiOiJJbWFnZSJ9LCJhZFNraXBCYW5uZXIiOnsibmFtZSI6ImFkU2tpcEJhbm5lciIsImltYWdlIjp7InNvdXJjZSI6Imh0dHBzOi8vczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vcmVzb3VyY2VzLnhwc2Fkcy5jb20tdXMtd2VzdC0yL3Byb2R1Y3Rpb24vaW1hZ2VzLzgwZWZhM2QxLWJkMzktNGYxZC1iYzg2LTYzNDQwZThjOWFmZC9rcm9nZXItYmFubmVyLnBuZyJ9LCJwb3NpdGlvbiI6eyJ4IjowLCJ5IjoyODB9LCJvYmplY3RUeXBlIjoiSW1hZ2UifSwiYXJyb3ciOnsibmFtZSI6ImFycm93IiwiaW1hZ2UiOnsic291cmNlIjoiaHR0cHM6Ly9zMy51cy13ZXN0LTIuYW1hem9uYXdzLmNvbS9yZXNvdXJjZXMueHBzYWRzLmNvbS11cy13ZXN0LTIvcHJvZHVjdGlvbi9pbWFnZXMvZjBjZDlkMWEtZDNiYi00NWFkLWE2MzktN2EyYzJjNzUxNjFjL2Fycm93LmdpZiJ9LCJwb3NpdGlvbiI6eyJ4IjozMjAsInkiOjYyMH0sImJlaGF2aW9ycyI6eyJ0d2VlbiI6eyJsb29wIjp0cnVlLCJ0cmFuc2l0aW9ucyI6W1sidG8iLHsieCI6MzIwLCJzY2FsZVgiOjEuMjV9LDUwMF0sWyJ0byIseyJ4IjozNTAsInNjYWxlWCI6MX0sNTAwXV19fSwib2JqZWN0VHlwZSI6IkltYWdlIn0sImtyb2dlckNhcmQiOnsibmFtZSI6Imtyb2dlckNhcmQiLCJpbWFnZSI6eyJzb3VyY2UiOiJodHRwczovL3MzLnVzLXdlc3QtMi5hbWF6b25hd3MuY29tL3Jlc291cmNlcy54cHNhZHMuY29tLXVzLXdlc3QtMi9wcm9kdWN0aW9uL2ltYWdlcy80NmRiMjk1My03NWFiLTQ3YWItYWJlNi1kNTI2OTYyZTJkOTgva3JvZ2VyQ2FyZC5wbmcifSwicG9zaXRpb24iOnsieCI6MTAsInkiOjUzMH0sImJlaGF2aW9ycyI6eyJkcmFnZ2FibGUiOnsic25hcGJhY2siOnRydWV9fSwib2JqZWN0VHlwZSI6IkltYWdlIn0sInBoYXJtYWN5U3RvcmVNYXNrIjp7Im5hbWUiOiJwaGFybWFjeVN0b3JlTWFzayIsImltYWdlIjp7InNvdXJjZSI6Imh0dHBzOi8vczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vcmVzb3VyY2VzLnhwc2Fkcy5jb20tdXMtd2VzdC0yL3Byb2R1Y3Rpb24vaW1hZ2VzLzU2ZDc2NDc2LTRmMmYtNDBkNy05YjNhLTdjM2Y0NGI5YmU4ZC9waGFtYWNpc3Rfd2l0aF9sb2dvLnBuZyJ9LCJwb3NpdGlvbiI6eyJ4IjoxMDUwLCJ5IjozMjB9LCJzY2FsZSI6eyJ4IjowLjUsInkiOjAuNX0sIm9iamVjdFR5cGUiOiJJbWFnZSJ9LCJwaGFybWFjeVN0b3JlIjp7Im5hbWUiOiJwaGFybWFjeVN0b3JlIiwiaW1hZ2UiOnsic291cmNlIjoiaHR0cHM6Ly9zMy51cy13ZXN0LTIuYW1hem9uYXdzLmNvbS9yZXNvdXJjZXMueHBzYWRzLmNvbS11cy13ZXN0LTIvcHJvZHVjdGlvbi9pbWFnZXMvNTZkNzY0NzYtNGYyZi00MGQ3LTliM2EtN2MzZjQ0YjliZThkL3BoYW1hY2lzdF93aXRoX2xvZ28ucG5nIn0sInBvc2l0aW9uIjp7IngiOjEwNTAsInkiOjMyMH0sInNjYWxlIjp7IngiOjAuNSwieSI6MC41fSwiYmVoYXZpb3JzIjp7ImJpbiI6eyJob2xkcyI6MSwiYXJlYSI6eyJ4IjowLCJ5IjowLCJ3aWR0aCI6MjgzLCJoZWlnaHQiOjU1MH0sIm1hc2tzIjp7Imtyb2dlckNhcmQiOiJwaGFybWFjeVN0b3JlTWFzayJ9LCJhY3Rpb25zIjp7ImZ1bGwiOlt7InR5cGUiOiJyZW1vdmVPYmplY3QiLCJsYXllciI6ImRyYWdnYWJsZSIsInRhcmdldCI6ImFycm93In0seyJ0eXBlIjoiYWR2YW5jZUdhbWUiLCJkZWxheSI6MTAwMH1dfX19LCJvYmplY3RUeXBlIjoiSW1hZ2UifX19LHsiZHVyYXRpb24iOjIwMDAsImxheWVycyI6W3siaWQiOiJiYWNrZ3JvdW5kIiwib2JqZWN0cyI6WyJiYWNrZ3JvdW5kIiwibGVhcm5Nb3JlQnV0dG9uIl19XSwib2JqZWN0cyI6eyJiYWNrZ3JvdW5kIjp7ImltYWdlIjp7InNvdXJjZSI6Imh0dHBzOi8vczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vcmVzb3VyY2VzLnhwc2Fkcy5jb20tdXMtd2VzdC0yL3Byb2R1Y3Rpb24vaW1hZ2VzLzU0ZWY5MDg5LTY0Y2EtNDE3My05NjliLTI2YTBiNzY1Yzg2Ny9rcm9nZXJiYWNrZ3JvdW5kLnBuZyJ9LCJwb3NpdGlvbiI6eyJ4IjowLCJ5IjowfSwib2JqZWN0VHlwZSI6IkltYWdlIn0sImxlYXJuTW9yZUJ1dHRvbiI6eyJwb3NpdGlvbiI6eyJ4Ijo1MDAsInkiOjM1MH0sImltYWdlIjp7InNvdXJjZSI6Imh0dHBzOi8vczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vcmVzb3VyY2VzLnhwc2Fkcy5jb20tdXMtd2VzdC0yL3Byb2R1Y3Rpb24vaW1hZ2VzL2FlZmY2OWJiLTQwNWEtNGJmNy1hMThhLTRhOTk1ZGVjMTdiYS9idXR0b25fam9pbi10aGUtY2x1Yi5wbmcifSwiYmVoYXZpb3JzIjp7ImNsaWNrYWJsZSI6eyJhY3Rpb25zIjp7ImNsaWNrIjpbeyJ0eXBlIjoibmF2aWdhdGlvbiIsInVybCI6Imh0dHBzOi8vd3d3Lmtyb2dlcnNjLmNvbS9zaWduLXVwIn1dfX19LCJvYmplY3RUeXBlIjoiSW1hZ2UifX19XX0=";
+  const ad = {
+    preview:
+      '<iframe width="' +
+      frameWidth +
+      '" height="' +
+      frameHeight +
+      '" scrolling="no" frameborder="1" src="/truengage_preview?width=' +
+      frameWidth +
+      "&height=" +
+      frameHeight +
+      "&versionURL=" +
+      versionURL +
+      "&sourceCode=" +
+      window.btoa(JSON.stringify(sourceCoodeTemp)) +
+      '"></iframe>',
+  };
+
+  return <>{versionURL ? <Iframe iframe={ad["preview"]} /> : null}</>;
+};
+
+function mapStateToProps(state) {
+  return {
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({}, dispatch);
+}
+
+export default compose(connect(mapStateToProps, mapDispatchToProps))(TruegagePreview);

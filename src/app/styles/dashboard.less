@@ -1,0 +1,111 @@
+.admin-countbox{
+    margin-top: 32px;
+    .countbox{
+        width: 100%;
+        padding: 80px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: @theme-secondary-color;
+        color: @white;
+        text-align: center;
+        flex-direction: column;
+        @media(max-width: 1600px){
+            padding: 60px 30px;
+        }
+        @media(max-width: 1400px){
+            padding: 50px 25px;
+        }
+        @media(max-width: 1200px){
+            padding: 35px 20px;
+        }
+        .count{
+            font-weight: 600;
+            font-size: 36px;
+        }
+        p{
+            font-size: 30px;
+            font-weight: 500;
+        }
+        &.green-countbox{
+            background: @theme-primary-color;
+        }
+    }
+}
+.dashboard-listings{
+    margin-top: 32px;
+    .ant-card {
+        border: 1px solid @card-border;
+        border-radius: 0;
+        .ant-card-head{
+            padding: 0 12px;
+            border-bottom: 1px solid @card-border;
+        }
+        .ant-list-item{
+            padding: 12px;
+            border-bottom: 1px solid @card-border;
+            .ant-avatar{
+                border: 1px solid @theme-button;
+                background: @card-border;
+            }
+        }
+        .ant-card-body{
+            padding: 0;
+        }
+        .ant-card-head .ant-card-head-title{
+            color: @dashboard-text;
+            font-size: 21px;
+            line-height: 1.1;
+            font-weight: 600;
+        }
+        .ant-card-extra a{
+            color: @dashboard-text;
+            letter-spacing: 1px;
+            font-size: 16px;
+            line-height: 1.1;
+            font-weight: 600;
+        }
+
+        .ant-list-item-meta-title{
+            font-size: 17px;
+            line-height: 1.1;
+            font-weight: 500;
+            margin-bottom: 0;
+            a{
+                color: @dashboard-text;
+            }
+            .anticon{
+                color: @theme-secondary-color;
+                font-size: 14px;
+                margin-left: 5px;
+                &.anticon-phone{
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        .ant-list-item-action > li{
+            color: @theme-button;
+            a{
+                color: @theme-button;
+                &.list-view{
+                    font-size: 17px;
+                }
+            }
+            .ant-list-item-action-split{
+                display: none;
+            }
+        }
+    }
+   .ant-select {
+        height: auto;
+    }
+}
+
+main.ant-layout-content.site-layout-background {
+    height: 100%;
+}
+
+button.ant-btn.ant-btn-default.connect-btn:focus, button.ant-btn.ant-btn-default.connect-btn:active {
+    background: transparent !important;
+    border-color: #1b75bc !important;
+}

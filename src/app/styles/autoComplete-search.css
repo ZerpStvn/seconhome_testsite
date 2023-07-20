@@ -1,0 +1,43 @@
+.wrapper {
+  position: relative;
+}
+.auto_complete {
+  width: 100%;
+  height: inherit;
+  background-color: white;
+  z-index: 10;
+  top: 48px;
+  position: absolute;
+}
+.suggestion {
+  margin: 20px;
+}
+.suggestion h2 {
+  font-weight: bold;
+}
+.suggestion p {
+  padding: 10px 0 0 0;
+}
+.suggestion .mainTitle {
+  font-size: 19px;
+  font-weight: 500;
+}
+.suggestion span {
+  font-size: 14px;
+  font-weight: 500;
+}
+.suggestion .colm_row {
+  display: flex;
+  gap: 3px;
+}
+.top_row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+.top_row img {
+  width: 30px;
+  height: 20px;
+}

@@ -1,0 +1,128 @@
+#admin-filter-topbar {
+    background: @greyf6;
+    padding: 15px 20px;
+    font-family: @theme-primary-font;
+    .ant-input-search{
+        span.ant-input-affix-wrapper {
+            padding: 0px;
+            width: 280px;
+            border: none;
+            border: 1px solid @grey66;
+            border-radius: 4px 0px 0px 4px;
+            box-shadow: none;
+            height: 40px;
+            padding: 3px 10px;
+            @media(max-width: 1360px){
+                width: 100%;  
+            }
+        }
+        button.ant-input-search-button {
+            border: none;
+            background: @theme-gradient;
+            color: @white !important;
+            height: 40px;
+            padding: 0px;
+            min-width: auto;
+            width: 45px;
+            border-radius: 0px 4px 4px 0px !important;
+            margin: 0;
+        }
+        input.ant-input {
+            border: none;
+            box-shadow: none;
+            outline: none;
+            height: 34px;
+        }
+    }
+    .ant-select-selector{
+        border: 1px solid @grey66;
+        font-family: @theme-primary-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: @grey66;
+        height: 40px;
+        padding: 3px 10px;
+    }
+    .save-btn{
+        &:not(.span-btn-class), &.span-btn-class button{
+            height: 40px;
+            padding: 10px 20px; 
+            font-family: @theme-primary-font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            background: @green;
+            border-color: @green;
+            color: @white;
+            &:hover {
+                background : darken(@green, 15%) !important;
+            }
+        }
+    }
+    .ant-segmented-item{
+        background: @white;
+        &.ant-segmented-item-selected{
+            background: @theme-gradient;
+            color: @white;
+        }
+    }
+}
+
+#property-homes-list{
+    .search-filter-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #000;
+        font-weight: 600;
+        line-height: 30px;
+    }
+    .totl-record{
+        background: none;
+        border: none;
+        border-right: 1px solid;
+        outline: none;
+        box-shadow: none;
+        padding: 0px;
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+        border-radius: 0px;
+        padding-right: 10px;
+        margin-right: 10px;
+        .anticon{
+            margin-right: 8px;
+        }
+        &> span {
+            &+ span {
+                margin-left: 10px;
+                border-left: 1px solid #e2e4e7;
+                padding-left: 10px;
+            }
+        }
+    }
+    .sortbylist{
+        background: none !important;
+        padding: 0px;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        color: @theme-gradient;
+        min-width: auto;
+        margin-left: 0;
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .search-filter-container{
+        padding: 20px 30px !important;
+    }
+}
+

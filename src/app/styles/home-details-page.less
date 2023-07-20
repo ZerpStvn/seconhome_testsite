@@ -1,0 +1,641 @@
+.homeDetailsBanner {
+  .homeImg {
+    display: flex;
+    margin-bottom: 9px;
+
+    .ant-image {
+      width: 100%;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+ &.guestUserBlock{
+  .homeImg {
+      pointer-events: none;
+  }
+ }
+}
+
+.ant-image-preview-body {
+  background-color: rgba(0, 0, 0, 0.42);
+}
+.homeDetailsBanner{
+  .blur-block {
+    &:before {
+      content: "Need to sign up";
+    }
+  }
+}
+
+.blur-block {
+  overflow: hidden;
+ &:before {
+  content: "Please login to view images";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 16px;
+  width: calc(100% - 68px);
+  text-align: center;
+}
+  * {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+  }
+}
+
+.homeTopDetails {
+  background-color: #fff;
+
+  .wrap {
+    max-width: 1170px;
+    margin: auto;
+    position: relative;
+    .VP-counts{
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      top: -28px;
+      z-index: 999;
+      ul{
+        display: flex;        
+        border: 1px solid #d5d5d5;
+        box-shadow: 0px 0px 25px rgba(0,0,0,0.15);
+        border-radius: 110px;
+        overflow: hidden;
+        li{
+          background: #FFFFFF;
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          color: #666666;
+          padding: 15px 40px;
+          &:last-child{
+            background: #F6F6F6;
+          }
+          svg{
+            float: left;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .single-property-intro {
+      padding-top: 30px;
+      max-width: 1045px;
+      margin: auto;
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      overflow: hidden;
+
+      .ant-row {
+        padding: 0px 30px;
+      }
+
+      .current-special {
+        background: linear-gradient(180deg, #1b75bc 0%, #0f5186 100%);
+        padding: 10px 0px;
+
+        .cs-inner {
+          .btn {
+            display: inline-block;
+          }
+
+          p {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .verified {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 3px;
+
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &:after {
+        content: "\f00c";
+        position: absolute;
+        color: #fff;
+        font-size: 9px;
+      }
+    }
+  }
+}
+
+.price-room-type {
+  padding: 40px;
+
+  .wrap {
+    max-width: 1240px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .callUs_single {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 35px;
+    text-align: center;
+    // position: static;
+    // top: 0px;
+  }
+}
+
+.property-review {
+  text-align: right;
+
+  .ant-segmented {
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  .ant-segmented-item {
+    margin-left: 5px;
+    background: #F4F4F4;
+
+    .ant-segmented-item-label {
+      min-height: 29px;
+      padding: 7px 10px;
+    }
+  }
+
+  .ant-segmented-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.property-status .verified {
+  border: 1px solid @success-color;
+  padding: 5px 15px;
+  display: inline-flex;
+  background-color: #2bb6730d;
+  color: @grey66;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.homeTopDetails .verified i {
+  color: @success-color;
+  margin-right: 6px;
+}
+
+.roomtype {
+  display: block;
+  justify-content: right;
+  text-align: right;
+}
+
+.roomtype button {
+  border: 1px solid #1b75bc;
+  border-radius: 50px;
+  color: #1b75bc;
+  background: transparent;
+  padding: 6px 20px;
+}
+
+button.assisted-btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.property-intro h2.property-name,
+.address {
+  padding-bottom: 8px;
+}
+
+.homeTopDetails .wrap .single-property-intro {
+  padding-top: 30px;
+  max-width: 1045px;
+  margin: auto;
+  box-shadow: 0px 0px 25px rgb(0 0 0 / 15%);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: -30px;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
+
+.homeTopDetails .wrap .single-property-intro .ant-row {
+  padding: 0px 30px;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.home-deatil-scroll {
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #1b75bc #f0f2f5;
+}
+
+.property-intro h2.property-name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.address {
+  font-size: 18px;
+}
+
+.budget {
+  font-size: 24px;
+  color: @success-color;
+  font-weight: 700;
+}
+
+.budget span {
+  font-size: 18px;
+  color: @grey66;
+  font-weight: 500;
+}
+
+label.ant-segmented-item.ant-segmented-item-selected span.ant-segmented-item-icon {
+  color: #1565a4;
+}
+
+label.ant-segmented-item.ant-segmented-item-selected {
+  border: 1px solid @theme-secondary-color;
+}
+
+.ant-segmented-item {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #f5f5f5;
+}
+
+span.ant-segmented-item-icon {
+  font-size: 20px;
+}
+
+.current-special .ant-row {
+  padding: 5px !important;
+  text-align: center;
+  color: #fff;
+}
+
+.cs-inner .btn {
+  border: 1px solid #ffffff;
+  padding: 0px 6px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.cs-inner .btn i {
+  border-right: 1px solid #ffff;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.property-basic-details {
+  .ant-row {
+    justify-content: space-around;
+  }
+  .ant-list-item-meta {
+    .ant-list-item-meta-avatar {
+      background: #176aac;
+      color: #fff;
+      height: 57px;
+      width: 57px;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 20px;
+    }
+    .ant-list-item-meta-content {
+      width: 100%;
+      max-width: 225px;
+    }
+  }
+}
+
+.property-basic-details {
+  padding: 56px 10px;
+}
+
+.property-basic-details h4.ant-list-item-meta-title {
+  color: #176aac;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.property-basic-details .ant-list-item-meta-description {
+  color: #111;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.fliterTitle {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.fliterTitle h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.fliterTitle a.ant-dropdown-trigger {
+  border: 1px solid #555;
+  width: 100%;
+  max-width: 206px;
+  padding: 9px 10px;
+  border-radius: 4px;
+}
+
+.fliterTitle a.ant-dropdown-trigger .ant-space {
+  justify-content: space-between;
+  display: flex;
+  color: #555;
+}
+
+.price-type-content {
+  background: #fff;
+  padding: 30px 50px;
+  max-width: 1045px;
+  margin: auto;
+  box-shadow: 0px 0px 25px rgb(0 0 0 / 15%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.price-type-content .budget {
+  font-size: 20px;
+  color: #2bb673;
+  font-weight: 600;
+}
+
+.RoomAmenities {
+  padding: 30px 0px;
+
+  .check-availability {
+    margin-top: 10px;
+  }
+}
+
+.room-facility-content-right {
+  text-align: right;
+}
+
+.room-facility-content-left {
+  text-align: left;
+}
+
+.RoomAmenities .img-option img {
+  border-radius: 10px;
+}
+
+.room-facility {
+  border-bottom: 1px solid #ddd;
+  padding: 24px 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.room-facility-content-left h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.room-facility .ant-row {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.features-option {
+  padding: 14px 0px;
+}
+
+.check-availability button {
+  width: 100%;
+  font-size: 18px;
+  padding: 16px !important;
+  margin-top: 40px;
+}
+
+.features-option h2 {
+  font-size: 18px;
+  /* color: #666; */
+}
+
+.price-type-content {
+  margin-bottom: 20px;
+}
+
+.callUs_single h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.contact-communitybtn button {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  margin: 20px 0px;
+}
+
+.call_info {
+  margin: 10px 0px 30px;
+}
+
+.deatl-edit-btn {
+  text-align: right;
+}
+
+.features-option .ant-image {
+  padding-right: 10px;
+}
+
+.services-features {
+  width: 100%;
+}
+
+.services-features ul {
+  padding: 10px;
+}
+
+.services-features ul li {
+  display: list-item;
+  list-style: circle;
+  width: 33%;
+  padding: 10px;
+  float: left;
+  font-size: 18px;
+}
+
+.location-deatil {
+  padding: 0px 0px 60px;
+}
+
+.about-paragraph {
+  padding: 72px 0px;
+}
+
+.about-paragraph p,
+.location-deatil p {
+  line-height: 31px;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.property-intro span {
+  margin-right: 7px;
+  color: #1b75bc;
+}
+
+.our-services h2.property-name {
+  padding: 0;
+}
+
+.location-deatil iframe {
+  margin-top: 15px;
+}
+
+.call_info i {
+  margin-right: 10px;
+}
+
+@media (max-width: 1024px) {
+  .services-features ul li {
+    width: 50%;
+  }
+
+  .roomtype button {
+    font-size: 14px;
+    padding: 7px 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-features ul li {
+    width: 50%;
+  }
+
+  .property-review {
+    text-align: left;
+    margin: 16px 0px;
+  }
+
+  .homeTopDetails .wrap .single-property-intro .ant-row {
+    padding-bottom: 10px;
+  }
+
+  .roomtype {
+    display: block;
+    margin: 15px 0;
+    text-align: left;
+  }
+
+  .fliterTitle {
+    display: block;
+  }
+
+  .deatl-edit-btn {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .price-type-content {
+    padding: 30px 24px;
+  }
+
+  .RoomAmenities .img-option {
+    margin-bottom: 15px;
+  }
+
+  .fliterTitle a.ant-dropdown-trigger {
+    max-width: 50%;
+    display: block;
+    margin-top: 15px;
+  }
+
+  .cs-inner .btn {
+    margin-bottom: 10px;
+  }
+
+  .price-room-type {
+    padding: 20px;
+  }
+
+  .check-availability button {
+    margin-top: 10px;
+  }
+
+  .RoomAmenities {
+    padding: 30px 0px 0px;
+  }
+
+  .room-facility {
+    padding: 18px 0px;
+  }
+
+  .about-paragraph {
+    padding: 30px 0px;
+  }
+}
+
+@media (max-width: 556px) {
+  .services-features ul li {
+    width: 100%;
+  }
+}
+
+.RoomAmenities .check-availability a.ant-btn {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  line-height: 1.2;
+  cursor: pointer;
+  text-transform: capitalize;
+  display: inline-block;
+  height: auto;
+  min-width: 100px;
+  transition: all .8s ease-in-out;
+  background: #73c053;
+  color: #fff;
+  width: 100%;
+  font-size: 18px;
+  padding: 16px !important;
+  margin-top: 40px;
+}
+
+.callUs_single_fixed {
+  .callUs_single {
+    position: fixed;
+    top: 80px;
+  }
+}
